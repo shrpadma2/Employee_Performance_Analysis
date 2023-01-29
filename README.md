@@ -1,13 +1,12 @@
-Data Science Project on Employee Performance Analysis
-Business Case:
+## Data Science Project on Employee Performance Analysis
+
+### Business Case:
 We must analyze the feautres present in the dataset, establish a correlation between the feautres and employee performance, and forecast the employee performance rating based on the feautres.
 
-INX Future Inc Employee Performance - Project
-The Data science project which is given here is an analysis of employee performance.
+### The Goal and Insights of the project are as follows:
 
-The Goal and Insights of the project are as follows:
+#### Department wise performances
 
-Department wise performances
 Top 3 Important Factors effecting employee performance
 A trained model which can predict the employee performance based on factors as inputs. This will be used to hire employees
 Recommendations to improve the employee performance based on insights from analysis
@@ -19,13 +18,13 @@ Categorical and numerical data make up the dataset. Since the target variable on
 
 Finding the significant factor influencing the performance rating is one of the project's key objectives. The machine learning model feature importance technique was used to forecast the significant characteristics. Because most machine learning techniques rely on numerical approaches, which do not support strings, the major methodology utilized in preprocessing data uses the Mannual & Frequency encoding method to turn string-categorical data into numerical data. The machine learning model and visualization approaches were used to carry out the project as a whole and meet its objectives.
 
-1. Requirement
+### 1. Requirement
 For this initiative, the IABAC served as the source of the data that was provided. Based on information from INX Future Inc. (referred as INX ). With more than 15 years of experience operating internationally, it is one of the top providers of automation and data analytics solutions. Over the last five years, INX has continuously ranked among the top 20 best employers. The information is not from the actual company. The entire project was completed using the Python platform and a Jupyter notebook.
 
-2. Analysis
+### 2. Analysis
 By summarizing the features found in the data, analysis of the data was conducted. In the analysis, the traits are more important. The characteristics reveal how the dependent and independent variables are related. Early on in our study, Pandas also helped to define the datasets and provide answers to the questions below. The dataset's data are broken down into categories and numerical data.
 
-Categorical Features
+#### Categorical Features
 EmpNumber
 Gender
 EducationBackground
@@ -35,7 +34,8 @@ EmpJobRole
 BusinessTravelFrequency
 OverTime
 Attrition
-Numerical Features
+
+#### Numerical Features
 Age
 DistanceFromHome
 EmpHourlyRate
@@ -47,7 +47,8 @@ ExperienceYearsAtThisCompany
 ExperienceYearsInCurrentRole
 YearsSinceLastPromotion
 YearsWithCurrManager
-Ordinal Features
+
+#### Ordinal Features
 EmpEducationLevel
 EmpEnvironmentSatisfaction
 EmpJobInvolvement
@@ -56,7 +57,8 @@ EmpJobSatisfaction
 EmpRelationshipSatisfaction
 EmpWorkLifeBalance
 PerformanceRating
-3.Univariate, Bivariate & Multivariate Analysis
+
+### 3.Univariate, Bivariate & Multivariate Analysis
 Library Used: Matplotlib & Seaborn
 Plots Used: Histplot, Lineplot, CountPlot, Barplot
 Tip: All Observation or insights written below the plots
@@ -66,9 +68,10 @@ Bivariate Analysis: In bivariate analysis we check the feature relationship with
 
 Multivariate Analysis: In multivariate Analysis check the relationship between two veriable with respect to the target veriable.
 
-CONCLUSION
+### CONCLUSION
 There are some features are positively correlated with performance rating( Target variable) [Emp Environment Satisfaction,Emp Last Salary Hike Percent,Emp Work Life Balance]
-4.Exploratory Data Analysis
+
+### 4.Exploratory Data Analysis
 Basic Check & Statistical Measures
 Their is no constant column is present in Numerical as well as categoriacl data.
 Distribution of Continuous Features:
@@ -90,7 +93,7 @@ we can say that around 80% feature mean lies between 8.5 to 10.5
 Distribution of Standard Deviation of Data
 Distribution of standard deviation of data also look like guassian distribution around 30% of feature standard deviation around the range of 3 3 to 20 and remaining 70% feature standard deviation in between 0 to 2
 
-5.Data Pre-Processing
+### 5.Data Pre-Processing
 1.Check Missing Value: Their is no missing value in data
 
 2.Categorical Data Conversion: Handel categorical data with the help of frequency and mannual encoding, because feature is contain lot's of labels
@@ -108,7 +111,8 @@ Q-Q Plot: Q–Q plot is a probability plot, a graphical method for comparing two
 5.Scaling The Data: scaling the data with the help of Standard scalar
 
 Standard Scaling: Standardization is the process of scaling the feature, it assumes the feature follow normal distribution and scale the feature between mean and standard deviation, here mean is 0 and standard deviation is always 1.
-6.Feature Selection
+
+### 6.Feature Selection
 1.Drop unique and constant feature: Dropping employee number because this is a constant column as well as drop Years Since Last Promotion because we create a new feaure using square root transformation
 
 2.Checking Correlation: Checking correlation with the help of heat map, and get the their is no highly correlated feature is present.
@@ -121,7 +125,7 @@ Heatmap: A heatmap is a graphical representation of data that uses a system of c
 Principal component analysis (PCA) is a popular technique for analyzing large datasets containing a high number of dimensions/features per observation, increasing the interpretability of data while preserving the maximum amount of information, and enabling the visualization of multidimensional data. Formally, PCA is a statistical technique for reducing the dimensionality of a dataset.
 5.Saving Pre-Process Data: save the all preprocess data in new file and add target feature to it.
 
-7.Machine learning Model Creation & Evaluation
+### 7.Machine learning Model Creation & Evaluation
 1.Define Dependant and Independant Features:
 
 2.Balancing the data: The data is imbalance, so we need to balance the data with the help of SMOTE
@@ -141,21 +145,9 @@ Support vector machine well perform on training data with accuracy 96.61% but th
 Random forest very well perform in training data with 100% accuracy but in testing 95.61% after doing hyperparameter tunning testing score is decreases.
 Artifical neural network[Multilayer percepton] perform very well on training data with 98.95% accuracy and testing score is 95.80%.
 So we are select Artifical neuranl network [Multilayer percepton] model.
-8.Saving Model
-Save model with the helpof pickle file
-Tools and Library Used:
-Tools:
-Jupyter
-Library Used:
-Pandas
-Numpy
-Matplotlib
-Seaborn
-pylab
-Scipy
-Sklearn
-Pickle
-Goal 1: Department Wise Performances
+
+
+### Goal 1: Department Wise Performances
 PLOT USED
 
 Violinplot: It shows the distribution of quantitative data across several levels of one (or more) categorical variables such that those distributions can be compared.
@@ -172,7 +164,7 @@ Research & Development: The age factor is not deviating from the level of perfor
 
 Finance: The finance department performance is exponentially decreasing when age increases. The male employees are doing good. The experience factor is inversely relating to the performance level.
 
-Goal 2: Top 3 Important Factors effecting employee performance
+### Goal 2: Top 3 Important Factors effecting employee performance
 The top three important features affecting the performance rating are ordered with their importance level as follows,
 
 Employment Environment Satisfaction
@@ -184,7 +176,7 @@ Employee last salary hike percent: More Number of Employees whose salary hike pe
 
 Employee work life balance: In EmpWorkLifeBalance, level 3 is showing high Performance Rating of employees
 
-Goal 3: A Trained model which can predict the employee performance
+### Goal 3: A Trained model which can predict the employee performance
 The trained model is created using the machine learning algorithm as follows with the accuracy score,
 
 Support Vector Classifier: 98.28% accuracy
